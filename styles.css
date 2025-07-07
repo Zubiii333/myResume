@@ -205,54 +205,36 @@ section p {
 
 .tech-tags {
     margin-top: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
 }
 
 .tech-tags span {
     display: inline-block;
-    background-color: #f5f5f7;
-    color: #1d1d1f;
-    padding: 8px 16px;
-    border-radius: 20px;
+    color: #0071e3;
     font-size: 14px;
-    margin: 4px 8px 4px 0;
+    font-weight: 500;
 }
 
 #skills ol {
-    margin-left: 0;
     max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-    list-style: none;
-    counter-reset: skills-counter;
+    margin: 0 auto;
+    column-count: 2;
+    column-gap: 32px;
+    list-style-position: inside;
 }
 
 #skills li {
     margin-bottom: 16px;
-    padding: 16px;
-    background-color: #f5f5f7;
-    border-radius: 8px;
     color: #515154;
     font-size: 18px;
-    position: relative;
-    padding-left: 48px;
-    counter-increment: skills-counter;
+    break-inside: avoid;
 }
 
-#skills li:before {
-    content: counter(skills-counter);
+#skills li::marker {
     color: #0071e3;
     font-weight: bold;
-    position: absolute;
-    left: 16px;
-    background-color: #0071e3;
-    color: white;
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 14px;
 }
 
 table {
